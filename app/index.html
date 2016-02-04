@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+
+<body ng-controller="MovieController">
+  <div class="container fluid">
+    <div class="row search">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="input-group search-bar">
+            <input type="text" ng-model="search" ng-click="select()" class="form-control input-sm" placeholder="search movie" autofocus>
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-sm" type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div id="related results" ng-include="'partials/related-results.html'"></div>
+    </div>
+    <div id="detail-results" ng-include="'partials/main-info.html'" class="col-md-6 animated bounce related-results"></div>
+ 
+</body>
+</html>

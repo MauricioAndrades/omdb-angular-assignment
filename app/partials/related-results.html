@@ -1,0 +1,21 @@
+<div ng-if="related.Response!=='False'">
+    <ul class="media-list" id="mediabox" />
+    <li class="media" ng-repeat="movie in related.Search">
+        <div class="media-left media-top headline-link">
+            <a href="#!/main-info.html" id="{{ $index + 1 }}" ng-click="update(movie)">
+                <!-- <img class="media-object" src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}" alt="..." style="height: 50px;"></a>
+            -->
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">
+                {{ movie.Title }}
+            </h4>
+            <p>
+                {{ movie.Year }}
+            </p>
+            <br>
+        </div>
+    </li>
+    </ul>
+</div>
+</div>

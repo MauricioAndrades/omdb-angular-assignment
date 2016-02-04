@@ -1,7 +1,7 @@
 'use strict';
 /* Controllers */
-var phonecatControllers = angular.module('phonecatControllers', ["angular.filter"]);
-phonecatControllers.controller('MovieController', function($scope, $http) {
+var omdbControllers = angular.module('omdbControllers', ["angular.filter"]);
+omdbControllers.controller('MovieController', function($scope, $http) {
     $scope.$watch('search', function() {
         fetch();
     });

@@ -5,14 +5,14 @@
  * module:
  *  a container for the different parts of an app including controllers, services, filters, directives which configures the Injector
  */
-var phonecatApp = angular.module('phonecatApp', [
+var omdbApp = angular.module('omdbApp', [
     'ngRoute',
-    'phonecatControllers'
+    'omdbControllers'
 ]);
 /** request $routeProvider to be injected into our function */
 /** app provider when defines our routes */
 /** $routeProvider.when(path, route) */
-phonecatApp.config(['$routeProvider',
+omdbApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
         when('/', {
